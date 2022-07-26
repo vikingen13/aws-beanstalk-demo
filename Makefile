@@ -9,5 +9,5 @@ CreateEnv:
 	mv drupal-9.4.3 $(env-name)
 	cd $(env-name);unzip ../eb-php-drupal-v1.zip;eb init --platform php-8.0 --region $(REGION) --tags Team=$(team);eb init;eb create $(env-name) --database.version 5.7
 	rm drupal.tar.gz
-	cd $(env-name);eb open
+	cd $(env-name);eb tags --add Team=$(team);eb open
 	
